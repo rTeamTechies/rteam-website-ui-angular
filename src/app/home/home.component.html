@@ -1,0 +1,314 @@
+<!-- Navigation Bar -->
+<nav class="navbar" [ngClass]="{'scrolled': isNavbarScrolled}">
+  <div class="logo">
+    <img src="assets/images/Logo_3-removebg.png" alt="" width="150" />
+  </div>
+  <ul class="nav-links">
+    <li><a href="#" [ngClass]="{'active': activeSection === 'home'}" class="active">Home</a></li>
+    <li><a href="#" [ngClass]="{'active': activeSection === 'about'}"
+        (click)="scrollToServicesSection(); $event.preventDefault();">About</a></li>
+    <li><a href="#" [ngClass]="{'active': activeSection === 'work'}"
+        (click)="scrollToWorkSection(); $event.preventDefault();">Work</a></li>
+    <li><a href="#" [ngClass]="{'active': activeSection === 'contact'}"
+        (click)="scrollToContactSection(); $event.preventDefault();">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" #heroSection>
+  <div class="hero-content">
+    <div style="position: absolute;">
+      <h1>Leveraging Technology. <br />Making Every Bussiness Count..!</h1>
+      <p class="subtitle">Tailored Business Solutions</p>
+      <button class="cta-btn" (click)="scrollToContactSection(); $event.preventDefault();">Get in touch <img src="../../assets/images/icons/icons8-arrow-30.png"
+          alt="call-male" /></button>
+    </div>
+  </div>
+  <div class="hero-video" style="position: relative; width: 100%; height: 100%;">
+    <img src="../../assets/images/HeroVideo.gif" alt="Hero Animation"
+      style="object-fit:cover; width:100%; height:100%; display:block; filter: blur(3px) brightness(0.7);" />
+  </div>
+</section>
+
+<section class="services-section" id="services-section" #servicesSection>
+  <div class="services-content">
+    <span class="services-label text-right">KNOW ABOUT US</span>
+    <h2>What We Can Do for You</h2>
+    <div class="service-list">
+      <div class="service-item">
+        <div class="service-info">
+          <h3>TAILORED SOFTWARE SOLUTIONS</h3>
+          <p>We craft cost-effective software to streamline your business and cut down manual work, with continuous
+            support to keep you ahead.</p>
+        </div>
+        <div class="service-icon">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/idea.png" alt="Market Research" />
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-info">
+          <h3>SOFTWARE AS A PRODUCT</h3>
+          <p>Our products include POS systems, membership management, and food ordering platforms, built to scale with
+            your needs.</p>
+        </div>
+        <div class="service-icon">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/money-bag.png" alt="Financial Services" />
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-info">
+          <h3>IOS/ANDROID MOBILE APPS</h3>
+          <p>We build powerful Android and iOS mobile apps tailored to your business needs, offering seamless access,
+            great user experience, and strong security.</p>
+        </div>
+        <div class="service-icon">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/online-store.png" alt="Online Marketing" />
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-info">
+          <h3>WEBISTE DESIGNING & MAINTENANCE</h3>
+          <p>A website is your business's digital identity — essential for attracting customers and growing online.
+            We design and host custom websites with integrated shopping features and secure payment gateways to power
+            your online presence.</p>
+        </div>
+        <div class="service-icon">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/online-store.png" alt="Online Marketing" />
+        </div>
+      </div>
+      <div class="service-item">
+        <div class="service-info">
+          <h3>24/7 SUPPORT</h3>
+          <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
+            unorthographic.</p>
+        </div>
+        <div class="service-icon">
+          <img src="https://img.icons8.com/ios-filled/50/ffffff/phone.png" alt="24/7 Support" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="services-image">
+    <img src="../../assets/images/pexels-photo-2451567.jpeg" alt="Office Team" />
+  </div>
+</section>
+
+<!-- Features Row -->
+<section class="features-row">
+  <div class="feature">
+    <img src="https://img.icons8.com/ios/50/customer-support.png" alt="customer-support" />
+    <h3>CUSTOMER SUPPORT</h3>
+    <p>Experience support that never sleeps! Our dedicated team is always just a message away, ensuring your business
+      runs smoothly, day or night.</p>
+  </div>
+  <div class="feature">
+    <img src="https://img.icons8.com/ios/64/000000/data-configuration.png" alt="Data Analysis" />
+    <h3>OFFLINE DATA BACKUP</h3>
+    <p>Your data, always safe and sound. With robust offline backup solutions, we keep your business protected—even when
+      the internet isn’t.</p>
+  </div>
+  <div class="feature">
+    <img src="https://img.icons8.com/ios/64/000000/design.png" alt="Graphic Design" />
+    <h3>DESIGN</h3>
+    <p>Where imagination meets innovation. Our design team crafts visually stunning and user-friendly experiences that
+      set your brand apart.</p>
+  </div>
+  <div class="feature">
+    <img src="https://img.icons8.com/ios/64/000000/idea.png" alt="Creative" />
+    <h3>CREATIVE</h3>
+    <p>Turning ideas into impact! We blend creativity with technology to deliver solutions that inspire, engage, and
+      drive results.</p>
+  </div>
+</section>
+
+<!-- Interesting Facts Section -->
+<section class="facts-section">
+  <div class="facts-overlay">
+    <div class="facts-content">
+      <div class="facts-title">
+        <span>SOME</span>
+        <h2>Interesting<br>Facts</h2>
+      </div>
+      <div class="facts-stats">
+        <div class="fact">
+          <div class="fact-number">15+</div>
+          <div class="fact-label">Done Works</div>
+        </div>
+        <div class="fact">
+          <div class="fact-number">10+</div>
+          <div class="fact-label">Happy Customers</div>
+        </div>
+        <div class="fact">
+          <div class="fact-number">10+</div>
+          <div class="fact-label">Tech Stacks</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="projects-section" id="work-section" #workSection>
+  <div class="projects-header">
+    <span class="projects-label">PROJECTS & SERVICES</span>
+    <h2>Recent Projects</h2>
+    <p>
+      Showcasing Our Latest Work and Success Stories
+    </p>
+  </div>
+  <div class="projects-gallery">
+    <div class="gallery-row">
+      <div class="gallery-item">
+        <img src="../../assets/images/rteam_POS.jpg" alt="POS Software" />
+        <div class="gallery-text">POS Software</div>
+      </div>
+
+      <div class="gallery-item">
+        <img src="../../assets/images/rteam_ServiceBooking.png" alt="Service Booking Software" />
+        <div class="gallery-text">Service Booking Software</div>
+      </div>
+    </div>
+    <div class="gallery-row">
+      <div class="gallery-item wide">
+        <img src="../../assets/images/rteam_membership_software_1.png" alt="Membership Management Software" />
+        <div class="gallery-text">Membership Management Software</div>
+      </div>
+      <div class="gallery-item">
+        <img src="../../assets/images/rteam_Inventory_Management_App.jpg" alt="Inventory Management Software" />
+        <div class="gallery-text">Inventory Management Software</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Testimonials Section -->
+<!-- <section class="testimonials-section">
+    <div class="testimonials-cards">
+      <div class="testimonial-card">
+        <div class="testimonial-avatar">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Garreth Smith" />
+          <span class="testimonial-quote">"</span>
+        </div>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <div class="testimonial-name">Garreth Smith</div>
+        <div class="testimonial-role">Marketing Manager</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-avatar">
+          <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Garreth Smith" />
+          <span class="testimonial-quote">"</span>
+        </div>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <div class="testimonial-name">Garreth Smith</div>
+        <div class="testimonial-role">Interface Designer</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-avatar">
+          <img src="https://randomuser.me/api/portraits/men/34.jpg" alt="Garreth Smith" />
+          <span class="testimonial-quote">"</span>
+        </div>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <div class="testimonial-name">Garreth Smith</div>
+        <div class="testimonial-role">UI Designer</div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-avatar">
+          <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="Garreth Smith" />
+          <span class="testimonial-quote">"</span>
+        </div>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+        <div class="testimonial-name">Garreth Smith</div>
+        <div class="testimonial-role">Web Developer</div>
+      </div>
+    </div>
+    <div class="testimonial-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+    </div>
+    <div class="testimonial-highlight">
+      <h2>My satisfied customer says</h2>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+    </div>
+  </section> -->
+
+<!-- Case Study Section -->
+<!-- <section class="case-study-section">
+    <div class="case-study-header">
+      <span class="case-study-label">OUR LATEST UPDATE</span>
+      <h2>Case Study</h2>
+      <p>Showcasing Our Latest Work and Success Stories</p>
+    </div>
+  </section> -->
+
+<!-- Contact Us Section -->
+<section class="contactus-section" id="contact-section" #contactSection>
+  <div class="contactus-container">
+    <h2>Let’s Connect!</h2>
+    <p class="contactus-catchy">Ready to take your business to the next level? Our team is just a call or click away.
+      Reach out and let’s build something amazing together!</p>
+    <div class="contactus-details">
+      <div class="contactus-method">
+        <img src="https://img.icons8.com/ios-filled/50/000000/phone.png" alt="Phone" class="contactus-icon" />
+        <div>
+          <!-- <div class="contactus-label">Call Us</div> -->
+          <a href="tel:+919025708661" class="contactus-link">+91 90257 08661</a>
+        </div>
+      </div>
+      <div class="contactus-method">
+        <img src="https://img.icons8.com/ios-filled/50/000000/new-post.png" alt="Email" class="contactus-icon" />
+        <div>
+          <!-- <div class="contactus-label">Email</div> -->
+          <a href="mailto:rteamfounders@rteamdigitalsolutions.com"
+            class="contactus-link">rteamfounders&#64;rteamdigitalsolutions.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer-section" id="footer-section" #footerSection>
+  <div class="footer-container">
+    <div class="footer-row">
+      <!-- Logo & Description -->
+      <div class="footer-col">
+        <img src="assets/images/Logo_3-removebg.png" alt="Logo" class="footer-logo" />
+        <p class="footer-desc">
+          Leveraging Technology. Making Every Business Count.<br>
+          Tailored Business Solutions for your growth.
+        </p>
+      </div>
+      <!-- Quick Links -->
+      <!-- <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Work</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div> -->
+      <!-- Contact Info -->
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul class="footer-contact">
+          <li><span>Address:</span> #28, 8th Street, Kamaraj Nagar, Avadi, Chennai, India</li>
+          <li><span>Email:</span> rteamfounders&#64;rteamdigitalsolutions.com</li>
+          <li><span>Phone:</span> +91 90257 08661</li>
+        </ul>
+        <!-- <div class="footer-social">
+          <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png" alt="Facebook" /></a>
+          <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/twitter.png" alt="Twitter" /></a>
+          <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/linkedin.png" alt="LinkedIn" /></a>
+          <a href="#"><img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png" alt="Instagram" /></a>
+        </div> -->
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 R-Team. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
