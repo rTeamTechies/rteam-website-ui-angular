@@ -1,0 +1,55 @@
+# Optional: Deploy to GitHub Pages via Actions (use only if you prefer auto-deploy on push).
+# To avoid timeouts, use "Deploy from a branch" in Settings → Pages and run ./deploy-gh-pages.sh instead.
+
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [master, main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install and build
+        run: |
+          npm ci
+          npx ng build --configuration production --base-href /
+
+      - name: Fix SPA routing (404.html)
+        run: |
+          cp dist/rteam-website/browser/index.html dist/rteam-website/browser/404.html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/rteam-website/browser
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        timeout-minutes: 30

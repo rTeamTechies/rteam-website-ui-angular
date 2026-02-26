@@ -14,6 +14,10 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
+## Deploy to GitHub Pages
+
+See **[DEPLOY.md](DEPLOY.md)** for deploying the built app to **https://rteamtechies.github.io/rteam-website-ui-angular/** (run `./deploy-gh-pages.sh` from the repo root).
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
